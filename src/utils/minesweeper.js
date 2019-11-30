@@ -2,6 +2,7 @@ import clickAudio from '../assets/static/click.mp3';
 import bombAudio from '../assets/static/bomb.mp3';
 import flagAudio from '../assets/static/flag.mp3';
 import winnerAudio from '../assets/static/winner.mp3';
+import { setTime } from '../actions';
 
 class Minesweeper {
   constructor(level) {
@@ -10,7 +11,6 @@ class Minesweeper {
     this.correct = 0;
     this.flags = 0;
     this.bombsPending = 0;
-    this.time = '00:00:00';
     this.goal = 0;
 
     this.levels = [
@@ -144,7 +144,7 @@ class Minesweeper {
     this.addBombs();
     this.calculateBombs();
     this.bombsPending = this.level.bombs - this.flags;
-    this.goal = (this.level.rows * this.level.columns) -this.level.bombs;
+    this.goal = (this.level.rows * this.level.columns) - this.level.bombs;
   }
 
   getElementsAround(i, j) {
@@ -158,7 +158,7 @@ class Minesweeper {
     return around;
   };
 
-  setItemVisible(item) { 
+  setItemVisible(item) {
 
     if (item.bomb) {
       this.playBomb();

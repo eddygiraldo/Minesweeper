@@ -8,6 +8,20 @@ export const changeLevel = (payload) => ({
   payload,
 });
 
+export const setTime = (payload) => {
+  return {
+    type: 'SET_TIME',
+    payload,
+  };
+};
+
+export const startTime = (payload) => {
+  return {
+    type: 'START_TIME',
+    payload,
+  };
+};
+
 export const setGameState = (payload) => ({
   type: 'SET_GAME_STATE',
   payload,
@@ -63,12 +77,14 @@ export const setItemVisible = (minesweeper, item) => {
   return (dispatch) => {
     if (item.bomb) {
       dispatch(setLoser(minesweeper));
+      dispatch(startTime(false));
     }
 
     minesweeper.setItemVisible(item);
 
     if (minesweeper.correct === minesweeper.goal) {
       dispatch(setWinner(minesweeper));
+      dispatch(startTime(false));
     }
 
     dispatch(setGameState(minesweeper));

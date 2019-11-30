@@ -5,12 +5,15 @@ const initialState = {
     visible: true,
     title: 'Bienvenido',
     content: 'A Minesweeper!',
-    winner: true,
+    winner: false,
     textButton: 'Iniciar juego',
   },
   selectedLevel: 0,
   minesweeper: {},
   changeState: 0,
+  interval: 0,
+  time: '00:00:00',
+  start: false,
 };
 
 const minesweeper = new Minesweeper(initialState.selectedLevel);
@@ -29,6 +32,16 @@ const reducer = (state = initialState, action) => {
         ...state,
         minesweeper: action.payload.minesweeper,
         selectedLevel: action.payload.selectedLevel,
+      };
+    case 'SET_TIME':
+      return {
+        ...state,
+        time: action.payload,
+      };
+    case 'START_TIME':
+      return {
+        ...state,
+        start: action.payload,
       };
     case 'SET_ITEM_VISIBLE':
       return {

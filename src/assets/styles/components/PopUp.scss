@@ -10,7 +10,7 @@
   bottom: 0;
   margin: auto;
   background-color: rgba(0,0,0, 0.5);
-  color: black;
+  color: white;
   transition: all 5s linear 0s;
 }
 
@@ -36,10 +36,6 @@
       opacity: 1;
       transform: translateY(0);
   }
-}
-
-.popup-container h1 {
-  color: #6AACD4;
 }
 
 .popup-contain {

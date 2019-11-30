@@ -4,7 +4,7 @@ import PopUp from '../components/PopUp';
 import '../assets/styles/App.scss';
 
 const Layout = (props) => {
-  const { children, popUp, selectedLevel } = props;
+  const { children, popUp, selectedLevel, time } = props;
   return (
     <>
       <div className='app'>
@@ -15,6 +15,7 @@ const Layout = (props) => {
           <PopUp
             popUp={popUp}
             level={selectedLevel}
+            time={time}
           />
         )
       }
@@ -26,6 +27,7 @@ const mapStateToProps = (state) => {
   return {
     popUp: state.popUp,
     selectedLevel: state.selectedLevel,
+    time: state.time,
   };
 };
 
