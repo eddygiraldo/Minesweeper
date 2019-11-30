@@ -1,0 +1,75 @@
+@import "../Variables.scss";
+
+.board{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.board-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  margin: 2px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.7);
+}
+
+.board-element.bomb.visible {
+  background-color: brown;
+}
+
+.dark {
+  background-color: #98DC78;
+}
+
+.light {
+  background-color: #98DC78;
+}
+
+.dark.visible {
+  background-color: $brown-dark;
+  transition: all .3s linear 0s;
+}
+
+.light.visible {
+  background-color: $brown-light;
+  transition: all .3s linear 0s;
+}
+
+.board-element:hover {
+  filter: brightness(120%);
+}
+
+.board-element img {
+  width:60%;
+}
+
+.hover {
+  filter: brightness(120%);
+}
+
+.board p {
+  font-weight: 900;
+}
+
+p[name="1"] {
+  color:green;
+}
+
+p[name="2"] {
+  color:blue;
+}
+
+p[name="3"] {
+  color:purple;
+}
+
+p[name="4"] {
+  color:red;
+}

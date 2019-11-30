@@ -1,0 +1,60 @@
+@import "../Variables.scss";
+
+.menu-game {
+  width: 20%;
+  height: calc(100vh - 20%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-game img {
+  width: 50px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+}
+
+.menu-levels {
+  display: flex;
+  justify-content: center;
+}
+
+.level-option {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  margin: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.level-option:hover {
+  filter: brightness(120%);
+}
+
+.level-option .active {
+  filter: brightness(120%);
+}
+
+.level-option[name="1"] {
+  background-color: #98DC78;
+}
+
+.level-option[name="2"] {
+  background-color: #6AACD4;
+}
+
+.level-option[name="3"] {
+  background-color: #E99F8F;
+}

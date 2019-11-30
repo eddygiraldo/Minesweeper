@@ -1,0 +1,49 @@
+@import "./Variables.scss";
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-color: #484C6B;
+  color: #DBDDD7;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  @media screen and (max-width: $max-width) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  @media screen and (max-width: $max-width) {
+    font-size: 22px;
+  }
+}
+
+.btn {  
+  cursor: pointer;
+  font-weight: bold;
+  transition: 250ms;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;  
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #6AACD4;
+  margin: 10px;
+}
+
+.btn:hover {
+  filter: brightness(120%);
+}
