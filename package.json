@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/eddygiraldo/Minesweeper/issues"
   },
-  "homepage": "*",
+  "homepage": "https://minesweepereddy.000webhostapp.com/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
